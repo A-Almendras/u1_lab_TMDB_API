@@ -13,6 +13,12 @@ const movieList = document.querySelector('section')
 // 3. Add the axios API call to search movie
 const getMovie = async () => {
   // console.log(`${input.value}`)
+
+  // if (e.keycode === 13) {
+  //   e.preventDefault()
+  //   button.click()
+  // }
+
   // 2. Store the text value of the input in a variable outside of your event listener.
   let movieInput = input.value
   let response = await axios.get(
@@ -55,5 +61,14 @@ const renderList = (movies) => {
 // EVENT LISTENERS
 // 1. Attach an event listener that simply logs the text value of the input
 button.addEventListener('click', getMovie)
+
+// Trying to search when enter is pressed
+// input.addEventListener('keyup', (e) => {
+//   if (e.keycode === 13) {
+//     e.preventDefault()
+//     button.click()
+//   }
+//   getMovie
+// })
 
 // handler: function that does something when we hear the listener
